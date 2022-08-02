@@ -33,8 +33,13 @@ The dataset of the credit card customers can be downloaded on the following link
 * Create a virtual enviroment in Python(version>3.9) and activate it
 * pip install -r requirements.txt
 * Install [Docker](https://docs.docker.com/get-docker/)
-* Create [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) account and a new app name
+$ docker build -t flask-heroku:latest .
+$ docker run -d -p 5000:5000 flask-heroku
 
+* Create [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) account and a new app name
+$ heroku container:login
+$ heroku container:push web --app your_app_name
+$ heroku container:release web --app yourawesomeapp
 # Process Flow
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/work%20flow.png)
 
@@ -55,7 +60,6 @@ The dataset of the credit card customers can be downloaded on the following link
 
 1. Kmeans with only numerical data  (silhouette score: 49.6)
 2. Kmeans with numerical and categorical features, using one hot encoding (silhouette score: 49.1)
-3. K-propotype to combine numerical and categorical features(silhouette score not available for this mode)
 
 Kmeans with only numerical features was the final model for deployment, as it gives the better silhouette score.
 
