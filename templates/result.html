@@ -1,11 +1,44 @@
 <!doctype html>
 <html>
 
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+
 <body>
-    <h1> {{ prediction }}</h1>
-    <div class="bd-example" align="middle">
+    <h1>
+        <p style="color:#212d63">This customer belongs to group:</p>
+    </h1>
+    <div class=" bd-example" align="middle">
+        <img src="{{ group_image }}" alt="Group Image">
+    </div>
+    <h2>
+        <p style="color:rgb(77, 77, 98)">{{ prediction }}</p>
+    </h2>
+    <h2>
+        <p style="color:#5469d4">{{ churn }}</p>
+    </h2>
+    <br>
+    <p style="color:rgb(77, 77, 98)">
+    <h3>Customer characteristics in this group:</h3>
+    </p>
+    <div class=" bd-example" align="middle">
         <img src="{{ user_image }}" alt="User Image">
     </div>
 </body>
 
 </html>
+
+rgb
