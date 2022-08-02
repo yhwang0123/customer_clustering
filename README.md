@@ -23,10 +23,10 @@ The dataset of the credit card customers can be downloaded on the following link
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/work%20flow.png)
 
 ## Data Processing
-1. Data Clean
+1. Data cleaning and wrangling
 2. Exploratory data analysis
    * for categorical features, plot the distribution chart between existing and churn customers\
-   some examples:
+   some examples:\
    ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/gender_distribution.png)
    ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/income_distribution.png)
 
@@ -52,7 +52,7 @@ The dataset of the credit card customers can be downloaded on the following link
 2. Kmeans with numeric and categoric data, using one hot encoding (silhouette score: 49.1)
 3. K-propotype to combine numeric and categoric data (silhouette score not available for this mode)
 
-Kmeans with only numeric data was the final model for deployment, as it gives the better silhouette score.
+### Kmeans with only numeric data was the final model for deployment, as it gives the better silhouette score.
 
 ## Clusters Prediction
 
@@ -77,7 +77,7 @@ create docker container to save the image
 3. Heroku \
 App pushed on heroku so that everyone can have the access to use the app
 
-The final app has been deployed on heroku with the link http://credit-card-customer.herokuapp.com/
+### The final app has been deployed on heroku with the link http://credit-card-customer.herokuapp.com/
 
 * index page:\
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/App%20Outline.png)
