@@ -32,13 +32,13 @@ The dataset of the credit card customers can be downloaded on the following link
 # Usage
 - Create a virtual enviroment in Python(version>3.9) and activate it
 - pip install -r requirements.txt
-- Install [Docker](https://docs.docker.com/get-docker/)
-`docker build -t flask-heroku:latest .`
+- Install [Docker](https://docs.docker.com/get-docker/)\
+`docker build -t flask-heroku:latest .`\
 `docker run -d -p 5000:5000 flask-heroku`
 
-* Create [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) account and a new app name
-`heroku container:login`
-`heroku container:push web --app your_app_name`
+* Create [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) account and a new app name\
+`heroku container:login`\
+`heroku container:push web --app your_app_name`\
 `heroku container:release web --app your_app_name`
 
 
