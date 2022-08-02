@@ -70,7 +70,7 @@ Churn Rate: 30.3% \
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/Churn%20Rate%20in%20client%20group.png)
 
 ### Cluster Anlaysis
-Analysis between different client group.
+Analysis and define groups characteristics.
 #### Example:
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/static/cluster_image/group1.png)
 
