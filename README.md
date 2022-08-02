@@ -77,7 +77,8 @@ create docker container to save the image
 3. Heroku \
 App pushed on heroku so that everyone can have the access to use the app
 
-### The final app has been deployed on heroku with the link http://credit-card-customer.herokuapp.com/
+### The final app has been deployed on heroku with the link:\
+http://credit-card-customer.herokuapp.com/
 
 * index page:\
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/App%20Outline.png)
