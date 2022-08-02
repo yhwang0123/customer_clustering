@@ -16,13 +16,13 @@
 * Deploy the API and the interface on Heroku.
 
 # Solution
-### An app for searching the customer group hhas been developed and deployed on heroku with the link:
+An app for searching the customer group hhas been developed and deployed on heroku with the link:
 http://credit-card-customer.herokuapp.com/
 
-### index page:\
+### index page:
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/App%20Outline.png)
 
-### result page:\
+### result page:
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/result.png)
 
 # Data Sources
@@ -38,7 +38,7 @@ The dataset of the credit card customers can be downloaded on the following link
 # Process Flow
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/work%20flow.png)
 
-## Data Processing
+### Data Processing
 1. Data cleaning and wrangling
 2. Exploratory data analysis
    * for categorical features, plot the distribution chart between existing and churn customers\
@@ -51,15 +51,15 @@ The dataset of the credit card customers can be downloaded on the following link
 3. Features Selection based on heatmap and exploratory data analysis
 
 
-## Model building
+### Model building
 
 1. Kmeans with only numeric data  (silhouette score: 49.6)
 2. Kmeans with numeric and categoric data, using one hot encoding (silhouette score: 49.1)
 3. K-propotype to combine numeric and categoric data (silhouette score not available for this mode)
 
-### Kmeans with only numeric data was the final model for deployment, as it gives the better silhouette score.
+Kmeans with only numeric data was the final model for deployment, as it gives the better silhouette score.
 
-## Clusters Prediction
+### Clusters Prediction
 
 * Group 1: Frequent card user with higher balance.\
 Churn Rate: 8.1%
@@ -69,15 +69,15 @@ Churn Rate: 10.7%
 Churn Rate: 30.3% \
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/Churn%20Rate%20in%20client%20group.png)
 
-## Cluster Anlaysis
+### Cluster Anlaysis
 Analysis between different client group.\
-### Example:
+#### Example:
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/static/cluster_image/group1.png)
 
-## Deployment
+### Deployment
 1. Flask \
-using flask to creat the app.py to get and post information from API
+Create app.py to get and post information from API
 2. Docker \
-create docker container to run the app
+Create docker container to run the app
 3. Heroku \
-App pushed on heroku so that everyone can have the access to use the app\
+App pushed on heroku so that everyone can have the access to use the app
