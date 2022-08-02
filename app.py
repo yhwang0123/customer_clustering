@@ -28,15 +28,21 @@ def result():
         to_predict_list = list(map(float, to_predict_list))
         result = ValuePredictor(to_predict_list)
     if float(result) == 0:
-        prediction = 'This Customer belongs to group 1: Frequent card user with higher balance.' 
+        prediction = "Group 1 - Frequent card user with higher balance"
+        churn = "This customer is most likely to continue with our card service."
+        group_image = '/static/cluster_image/g1.png'
         img_filename = '/static/cluster_image/group1.png'
     elif float (result) == 1:
-        prediction = 'This Customer belongs to group 2: Non-frequent card user with high card limit.'
+        prediction = "Group 2 - Non-frequent card user with high card limit"
+        churn =  "This customer is more likely to continue with our card service."
+        group_image = '/static/cluster_image/g2.png'
         img_filename = '/static/cluster_image/group2.png'
     else:
-        prediction = 'This Customer belongs to group 3: Non-frequent user with lower card limit and more contacts.'
+        prediction = "Group 3 - Non-frequent user with lower card limit and more contacts with customer service"
+        churn = "This customer is more likely to churn."
+        group_image = '/static/cluster_image/g3.png'
         img_filename = '/static/cluster_image/group3.png'
-    return render_template("result.html",prediction = prediction,user_image = img_filename)
+    return render_template("result.html",prediction = prediction,churn=churn, group_image = group_image, user_image = img_filename)
 
 
 if __name__ == "__main__":
