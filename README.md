@@ -15,9 +15,25 @@
 * Create a basic Graphical User Interface to call the API.
 * Deploy the API and the interface on Heroku.
 
+# Solution
+### An app for searching the customer group hhas been developed and deployed on heroku with the link:
+http://credit-card-customer.herokuapp.com/
+
+### index page:\
+![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/App%20Outline.png)
+
+### result page:\
+![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/result.png)
+
 # Data Sources
 The dataset of the credit card customers can be downloaded on the following link:\
 [Credit Card Customers](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers)
+
+# Usage
+* Create a virtual enviroment in Python(version>3.9) and activate it
+* ''' pip install -r requirements.txt '''
+* Install [Docker](https://docs.docker.com/get-docker/)
+* Create [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) account and a new app name
 
 # Process Flow
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/work%20flow.png)
@@ -33,18 +49,7 @@ The dataset of the credit card customers can be downloaded on the following link
    * for numeric features, get the mean values of each feature and compare the data between existing and churn customers
 
 3. Features Selection based on heatmap and exploratory data analysis
-* Features with only numeric data
-  - Contacts_Count_12_mon
-  - Credit_Limit
-  - Total_Revolving_Bal
-  - Avg_Utilization_Ratio
 
-* Features with both numeric and categoric data
-  - Gender
-  - Contacts_Count_12_mon
-  - Credit_Limit
-  - Total_Revolving_Bal
-  - Avg_Utilization_Ratio
 
 ## Model building
 
@@ -66,22 +71,13 @@ Churn Rate: 30.3% \
 
 ## Cluster Anlaysis
 Analysis between different client group.\
-Below is one example:
+### Example:
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/static/cluster_image/group1.png)
 
-# Deployment
+## Deployment
 1. Flask \
 using flask to creat the app.py to get and post information from API
 2. Docker \
-create docker container to save the image
+create docker container to run the app
 3. Heroku \
-App pushed on heroku so that everyone can have the access to use the app
-
-### The final app has been deployed on heroku with the link:
-http://credit-card-customer.herokuapp.com/
-
-* index page:\
-![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/App%20Outline.png)
-
-* result page:\
-![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/result.png)
+App pushed on heroku so that everyone can have the access to use the app\
