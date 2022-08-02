@@ -1,6 +1,6 @@
 # Customer Clustering Project 
 
-# Mission:
+# Mission
 * Find possible groups of clients and define their characteristics. 
 * Evaluate the churn rate in all groups of clients.
 * Build an application that allows your customer to find the right group (cluster) for a given client.
@@ -31,7 +31,9 @@ The dataset of the credit card customers can be downloaded on the following link
 
 # Usage
 * Create a virtual enviroment in Python(version>3.9) and activate it
-* ''' pip install -r requirements.txt '''
+* '''
+pip install -r requirements.txt
+'''
 * Install [Docker](https://docs.docker.com/get-docker/)
 * Create [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) account and a new app name
 
@@ -70,7 +72,7 @@ Churn Rate: 30.3% \
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/Churn%20Rate%20in%20client%20group.png)
 
 ### Cluster Anlaysis
-Analysis between different client group.\
+Analysis between different client group.
 #### Example:
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/static/cluster_image/group1.png)
 
