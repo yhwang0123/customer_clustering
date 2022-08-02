@@ -30,20 +30,16 @@ The dataset of the credit card customers can be downloaded on the following link
 [Credit Card Customers](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers)
 
 # Usage
-* Create a virtual enviroment in Python(version>3.9) and activate it
-* pip install -r requirements.txt
-* Install [Docker](https://docs.docker.com/get-docker/)
-'''
-$ docker build -t flask-heroku:latest .
-$ docker run -d -p 5000:5000 flask-heroku
-'''
+- Create a virtual enviroment in Python(version>3.9) and activate it
+- pip install -r requirements.txt
+- Install [Docker](https://docs.docker.com/get-docker/)
+`docker build -t flask-heroku:latest .`
+`docker run -d -p 5000:5000 flask-heroku`
 
 * Create [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) account and a new app name
-'''
-$ heroku container:login
-$ heroku container:push web --app your_app_name
-$ heroku container:release web --app your_app_name
-'''
+`heroku container:login`
+`heroku container:push web --app your_app_name`
+`heroku container:release web --app your_app_name`
 
 
 # Process Flow
@@ -64,8 +60,8 @@ $ heroku container:release web --app your_app_name
 
 ### Model building
 
-1. Kmeans with only numerical data  (silhouette score: 49.6)
-2. Kmeans with numerical and categorical features, using one hot encoding (silhouette score: 49.1)
+- Kmeans with only numerical data  (silhouette score: 49.6)
+- Kmeans with both numerical and categorical features. For categorical features, apply one hot encoding (silhouette score: 49.1)
 
 Kmeans with only numerical features was the final model for deployment, as it gives the better silhouette score.
 
@@ -85,9 +81,9 @@ Analysis and define groups characteristics.
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/static/cluster_image/group1.png)
 
 ### Deployment
-1. Flask \
+- Flask \
 Create app.py to get and post information from API
-2. Docker \
+- Docker \
 Create docker container to run the app
-3. Heroku \
+- Heroku \
 App pushed on heroku so that everyone can have the access to use the app
