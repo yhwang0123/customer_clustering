@@ -12,20 +12,41 @@
 * Describe the results from unsupervised learning.
 * Be able to deploy a machine learning model.
 * Be able to create a Flask API that can handle a machine learning model.
-* Create a basic Graphical User Interface to call the API
-* Deploy the API and the interface on Heroku
+* Create a basic Graphical User Interface to call the API.
+* Deploy the API and the interface on Heroku.
 
 # Data Sources
+The dataset of the credit card customers can be downloaded on the following link:\
 [Credit Card Customers](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers)
 
 # Process Flow
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/work%20flow.png)
 
-# Data Processing
-1. features with only numeric data 
-2. features with both numeric and categoric data
+## Data Processing
+1. Data Clean
+2. Exploratory data analysis
+   * for categorical features, plot the distribution chart between existing and churn customers\
+   some examples:
+   ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/gender_distribution.png)
+   ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/income_distribution.png)
 
-# Model building
+   * for categorical features, get the mean value in each column and compare the data between existing and churn customers
+
+3. Features Selection based on heatmap and exploratory data analysis
+* Features with only numeric data
+  - Contacts_Count_12_mon
+  - Credit_Limit
+  - Total_Revolving_Bal
+  - Avg_Utilization_Ratio
+
+* Features with both numeric and categoric data
+  - Gender
+  - Contacts_Count_12_mon
+  - Credit_Limit
+  - Total_Revolving_Bal
+  - Avg_Utilization_Ratio
+
+## Model building
 
 1. Kmeans with only numeric data  (silhouette score: 49.6)
 2. Kmeans with numeric and categoric data, using one hot encoding (silhouette score: 49.1)
@@ -33,18 +54,20 @@
 
 Kmeans with only numeric data was my model for deployment at last, as it gives the better silhouette score.
 
-# Clusters Prediction
+## Clusters Prediction
 
 * Group 1: Frequent card user with higher balance.\
 Churn Rate: 8.1%
 * Group 2: Non-frequent card user with high card limit.\
 Churn Rate: 10.7%
 * Group 3: Non-frequent user with lower card limit and more customer contacts.\
-Churn Rate: 30.3%
+Churn Rate: 30.3% \
 ![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/assets/Churn%20Rate%20in%20client%20group.png)
 
-# Cluster Anlaysis
-
+## Cluster Anlaysis
+Analysis between different client group.
+Below is one example:
+![alt text](https://github.com/yhwang0123/customer_clustering/blob/main/static/cluster_image/group1.png)
 
 # Deployment
 1. Flask \
