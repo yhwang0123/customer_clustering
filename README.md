@@ -1,19 +1,9 @@
 # Customer Clustering Project 
 
-# Mission
+# Objective
 * Find possible groups of clients and define their characteristics. 
 * Evaluate the churn rate in all groups of clients.
-* Build an application that allows your customer to find the right group (cluster) for a given client.
-
-# Objective
-* Build machine learning model for clustering.
-* Select the right performance metrics for model.
-* Tuning parameters of the model for better performance.
-* Describe the results from unsupervised learning.
-* Be able to deploy a machine learning model.
-* Be able to create a Flask API that can handle a machine learning model.
-* Create a basic Graphical User Interface to call the API.
-* Deploy the API and the interface on Heroku.
+* Build an application that allows your customer to find the right group (cluster) for the client.
 
 # Solution
 An app for searching the customer group hhas been developed and deployed on heroku with the link:\
